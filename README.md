@@ -11,8 +11,10 @@ This package will use BeautifulSoup4 and Request, to produce output in the form 
 import gempaterkini
 
 if __name__ == '__main__':
-    result = gempaterkini.ekstraksi_data()
-    gempaterkini.tampilkan_data(result)
+    gempa_di_indonesia = gempaterkini.GempaTerkini('https://bmkg.go.id')
+    print(f'Aplikasi utama menggunakan package yang memiliki deskripsi {gempa_di_indonesia.description}')
+    gempa_di_indonesia.tampilkan_keterangan()
+    gempa_di_indonesia.run()
 ```
 
 # Author
